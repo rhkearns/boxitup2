@@ -21,13 +21,12 @@
   {% comment %} <a href="{% url '' box.id %}" class="btn close">Close Box</a>  {% endcomment %}
 </section>
 
- 
 <div class="items-container">
   <section class="items">
     <div class="subsection-title">
       <h2>Contents</h2>
     </div>
-    {% comment %} <h3>Add Items to the Box</h3>
+    <h3>Add Items to the Box</h3>
     <form 
       action="{% url 'add_item' box.id %}"
       method="POST"
@@ -35,8 +34,9 @@
     >
       {% csrf_token %}
       {{ item_form.as_p }}
-      <button class="btn submit" type="submit">Add Item</button> {% endcomment %}
+      <button class="btn submit" type="submit">Add Item</button>
     </form>
+      {% if box.item_set.all.count %}
       <table>
         <tr><th>Item</th><th>Quantity</th></tr>
         <tbody>
@@ -56,6 +56,9 @@
           {% endfor %}
         </tbody>
       </table>
+      {% else %}
+      
+      {% endif %}
   </section>
 </div> 
 

@@ -8,5 +8,6 @@ urlpatterns = [
   path('boxes/create/', views.BoxCreate.as_view(), name='boxes_create'),
   path('boxes/<int:pk>/update', views.BoxUpdate.as_view(), name='boxes_update'),
   path('boxes/<int:pk>/delete', views.BoxDelete.as_view(), name='boxes_delete'),
+  path('boxes/<int:box_id>/add_item', views.add_item, name='add_item'),
 
 ]
