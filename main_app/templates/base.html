@@ -27,7 +27,8 @@
     </div>
     <nav>
       <ul>
-        <li><a href="/boxes">My Boxes</a></li>
+        <li><a href="{% url 'boxes_index' %}">My Boxes</a></li>
+        <li><a href="{% url 'boxes_create' %}">Add a Box</a></li>
       </ul>
     </nav>
   </header>
