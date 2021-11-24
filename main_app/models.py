@@ -24,3 +24,11 @@ class Box(models.Model):
 
   def get_absolute_url(self):
     return reverse('boxes_detail', kwargs={'box_id': self.id })
+
+class Item(models.Model):
+  name = models.CharField(max_length=30)
+  quantity = models.IntegerField()
+  box = models.ForeignKey(Box, on_delete=models.CASCADE)
+
+  def __str__(self):
+    return f"{self.name}: {self.quantity}"
