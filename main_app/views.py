@@ -3,6 +3,8 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Box
 from .forms import ItemForm
 
@@ -10,16 +12,18 @@ from .forms import ItemForm
 class Home(LoginView):
   template_name = 'home.html'
 
+@login_required
 def boxes_index(request):
-  boxes = Box.objects.all()
+  boxes = Box.objects.filter(user=request.user)
   return render(request, 'boxes/index.html', {'boxes': boxes })
 
+@login_required
 def boxes_detail(request, box_id):
   box = Box.objects.get(id=box_id)
   item_form = ItemForm()
   return render(request, 'boxes/detail.html', {'box': box, 'item_form': item_form })
 
-class BoxCreate(CreateView):
+class BoxCreate(LoginRequiredMixin, CreateView):
   model = Box
   fields = ['number', 'size', 'category']
 
@@ -27,11 +31,11 @@ class BoxCreate(CreateView):
     form.instance.user = self.request.user
     return super().form_valid(form)
 
-class BoxUpdate(UpdateView):
+class BoxUpdate(LoginRequiredMixin, UpdateView):
   model = Box
   fields = ['size', 'category']
 
-class BoxDelete(DeleteView):
+class BoxDelete(LoginRequiredMixin, DeleteView):
   model = Box
   success_url = '/boxes/'
 
