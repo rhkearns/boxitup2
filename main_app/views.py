@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Box
 
 # Create your views here.
@@ -18,3 +18,10 @@ class BoxCreate(CreateView):
   model = Box
   fields = ['number', 'size', 'category']
 
+class BoxUpdate(UpdateView):
+  model = Box
+  fields = ['size', 'category']
+
+class BoxDelete(DeleteView):
+  model = Box
+  success_url = '/boxes/'
