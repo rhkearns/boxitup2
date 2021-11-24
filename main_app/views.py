@@ -47,6 +47,8 @@ def add_item(request, box_id):
     new_item.save()
   return redirect('boxes_detail', box_id=box_id)
 
+
+
 def signup(request):
   error_message = ''
   if request.method == 'POST':
