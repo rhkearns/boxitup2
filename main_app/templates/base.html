@@ -27,8 +27,14 @@
     </div>
     <nav>
       <ul>
+        {% if user.is_authenticated %}
         <li><a href="{% url 'boxes_index' %}">My Boxes</a></li>
         <li><a href="{% url 'boxes_create' %}">Add a Box</a></li>
+        <li><a href="{% url 'logout' %}">Log Out</a></li>
+        {% else %}
+        <li><a href="{% url 'login' %}">Login</a></li>
+        {% comment %} <li><a href="{% url 'signup' %}">Sign Up</a></li> {% endcomment %}
+        {% endif %}
       </ul>
     </nav>
   </header>
