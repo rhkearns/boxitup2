@@ -21,6 +21,10 @@ class BoxCreate(CreateView):
   model = Box
   fields = ['number', 'size', 'category']
 
+  def form_valid(self, form):
+    form.instance.user = self.request.user
+    return super().form_valid(form)
+
 class BoxUpdate(UpdateView):
   model = Box
   fields = ['size', 'category']
