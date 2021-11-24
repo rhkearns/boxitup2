@@ -27,7 +27,7 @@
     <div class="subsection-title">
       <h2>Contents</h2>
     </div>
-    <h3>Add Items to the Box</h3>
+    {% comment %} <h3>Add Items to the Box</h3>
     <form 
       action="{% url 'add_item' box.id %}"
       method="POST"
@@ -35,7 +35,7 @@
     >
       {% csrf_token %}
       {{ item_form.as_p }}
-      <button class="btn submit" type="submit">Add Item</button>
+      <button class="btn submit" type="submit">Add Item</button> {% endcomment %}
     </form>
       <table>
         <tr><th>Item</th><th>Quantity</th></tr>
