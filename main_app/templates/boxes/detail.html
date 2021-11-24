@@ -21,7 +21,7 @@
   {% comment %} <a href="{% url '' box.id %}" class="btn close">Close Box</a>  {% endcomment %}
 </section>
 
-{% comment %} 
+ 
 <div class="items-container">
   <section class="items">
     <div class="subsection-title">
@@ -45,12 +45,12 @@
               <td>{{item.name}}</td>
               <td>{{item.quantity}}</td>
               <td>
-                <form action="
+                {% comment %} <form action="
                 {% url 'remove_item' box_id item_id %}"  {% 
-                method="POST">
+                method="POST"> 
                   {% csrf_token %}
                   <button class="btn danger" type="submit">Delete Item</button>
-                </form>
+                </form>{% endcomment %}
               </td>
             </tr>
           {% endfor %}
@@ -58,6 +58,5 @@
       </table>
   </section>
 </div> 
-{% endcomment %}
 
 {% endblock  %}
