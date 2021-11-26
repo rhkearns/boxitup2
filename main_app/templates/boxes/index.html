@@ -17,8 +17,9 @@
     <a href="{% url 'boxes_detail' box.id %}">
       <div class="card-content">
         <div class="card-img-container">
+          <img src="" alt="">
         </div>
-        <h2 class="card-title">{{box.number}}</h2>
+        <h2 class="card-title">Box #{{box.number}}</h2>
         {% if box.size %}
           <p class="card-text">{{ box.size }}</p>
         {% endif %}
