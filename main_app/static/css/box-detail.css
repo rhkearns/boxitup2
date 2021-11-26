@@ -11,6 +11,12 @@
   max-width: 350px;
 }
 
+.ud-buttons {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+}
+
 .usr-img {
   width: 100%;
   border-radius: var(--card-border-radius);
@@ -158,16 +164,26 @@
 
 @media only screen and (min-width: 768px) {
   .box-container {
-    padding: 35px 30px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
+    display: grid;
+    grid-template-columns: 20% 30% 30% 20%;
+    grid-template-rows: 75% 25%;
+    justify-content: center;
   }
 
+  .box-details {
+    text-align: center;
+    grid-column: 3 / 4 ;
+  }
+  
   .box-img {
     width: 25%;
     max-width: 250px;
     margin-right: 25px;
+  }
+
+  .ud-buttons {
+    grid-column: 2 / 4;
+    justify-content: center;
   }
 
   .items-container {

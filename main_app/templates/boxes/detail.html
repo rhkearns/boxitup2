@@ -16,8 +16,11 @@
     <h3>Size: {{box.size}}</h3>
     <h3>Category: {{box.category}}</h3>
   </div>
-  <a href="{% url 'boxes_update' box.id %}" class="btn warn">Edit</a>
-  <a href="{% url 'boxes_delete' box.id %}" class="btn danger">Delete Box</a>
+  <div class='ud-buttons'>
+    <a href="" class="btn close">Close Box</a>
+    <a href="{% url 'boxes_update' box.id %}" class="btn warn">Edit</a>
+    <a href="{% url 'boxes_delete' box.id %}" class="btn danger">Delete Box</a>
+  </div>
 </section>
 
 <div class="items-container">
