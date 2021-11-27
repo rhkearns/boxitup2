@@ -52,6 +52,14 @@ def delete_item(request, box_id, item_id):
   Item.objects.get(id=item_id).delete()
   return redirect('boxes_detail', box_id=box_id)
 
+def close_box(request, box_id):
+  box = Box.objects.get(id=box_id)
+  if box.isClosed:
+    setattr(box, 'isClosed', False)
+  else:
+    setattr(box, 'isClosed', True)
+  box.save()
+  return redirect('boxes_detail', box_id=box_id)
 
 def signup(request):
   error_message = ''
