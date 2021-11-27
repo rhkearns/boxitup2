@@ -11,6 +11,10 @@
   max-width: 350px;
 }
 
+img {
+  width: 200px;
+}
+
 .ud-buttons {
   margin: 10px 0;
   display: flex;
@@ -171,7 +175,7 @@
   }
 
   .box-details {
-    text-align: center;
+    text-align: left;
     grid-column: 3 / 4 ;
   }
   
@@ -179,6 +183,8 @@
     width: 25%;
     max-width: 250px;
     margin-right: 25px;
+    grid-column: 2 / 3;
+    justify-self: center;
   }
 
   .ud-buttons {

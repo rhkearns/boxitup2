@@ -10,16 +10,21 @@
   margin: 10px;
   border: var(--borders);
   box-shadow: var(--card-box-shadow);
+  border: 1px solid rgba(17, 20, 17, .2);
 }
 
 .card-content {
   padding: 10px;
   width: 100%;
+  text-align: right;
 }
 
-.usr-img {
-  width: 100%;
-  border-radius: var(--card-border-radius);
+.card-img-container {
+  text-align: center;
+}
+
+img {
+  width: 200px;
 }
 
 .card > a {

@@ -17,7 +17,11 @@
     <a href="{% url 'boxes_detail' box.id %}">
       <div class="card-content">
         <div class="card-img-container">
-          <img src="" alt="">
+          {% if box.isClosed %}
+            <img src="{% static 'images/closed_box.png' %}" alt="A Closed Box">
+          {% else %}
+            <img src="{% static 'images/open_box.png' %}" alt="An Open Box">
+          {% endif %}
         </div>
         <h2 class="card-title">Box #{{box.number}}</h2>
         {% if box.size %}

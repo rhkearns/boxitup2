@@ -9,7 +9,11 @@
 
 <section class="box-container">
   <div class="box-img">
-    <img src="" alt="">
+    {% if box.isClosed %}
+      <img src="{% static 'images/closed_box.png' %}" alt="A Closed Box">
+    {% else %}
+      <img src="{% static 'images/open_box.png' %}" alt="An Open Box">
+    {% endif %}
   </div>
   <div class="box-details">
     <h1>Box #{{ box.number }}</h1>
