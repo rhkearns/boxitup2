@@ -10,6 +10,6 @@ urlpatterns = [
   path('boxes/<int:pk>/delete', views.BoxDelete.as_view(), name='boxes_delete'),
   path('boxes/<int:box_id>/add_item', views.add_item, name='add_item'),
   path('boxes/<int:box_id>/delete_item/<int:item_id>/', views.delete_item, name='delete_item'),
+  path('boxes/<int:pk>/close', views.close_box, name="close_box"),
   path('accounts/signup/', views.signup, name='signup'),
-
 ]
