@@ -262,6 +262,12 @@ nav li {
     height: 35px;
   }
 
+  nav li {
+    border-radius: 18px;
+    margin: 0 10px;
+    background-color: var(--nav-bg);
+  }
+
   @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     header {
       -webkit-backdrop-filter: none;
@@ -270,7 +276,7 @@ nav li {
 
     nav,
     .header-logo-container {
-      background: var(--nav-bg);
+      /* background: var(--nav-bg); */
       -webkit-backdrop-filter: blur(3px);
       backdrop-filter: blur(3px);
     }
