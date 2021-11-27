@@ -21,7 +21,12 @@
     <h3>Category: {{box.category}}</h3>
   </div>
   <div class='ud-buttons'>
-    <a href="" class="btn close">Close Box</a>
+    <a href="" class="btn close">
+      {% if box.isClosed %}
+        Open Box
+      {% else %}
+        Close Box
+      {% endif %}</a>
     <a href="{% url 'boxes_update' box.id %}" class="btn warn">Edit</a>
     <a href="{% url 'boxes_delete' box.id %}" class="btn danger">Delete Box</a>
   </div>
