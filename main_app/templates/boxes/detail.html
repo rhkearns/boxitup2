@@ -19,7 +19,6 @@
     <h1>Box #{{ box.number }}</h1>
     <h3>Size: {{box.size}}</h3>
     <h3>Category: {{box.category}}</h3>
-    <h3>Closed? {{box.isClosed}}</h3>
   </div>
   <div class='ud-buttons'>
     <a href="{% url 'close_box' box.id %}" class="btn close">

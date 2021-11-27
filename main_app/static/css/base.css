@@ -29,7 +29,7 @@ body {
   --nav-bg: rgb(76, 218, 140);
   --text-color: rgb(17, 20, 17);
   --link-hover-color: rgb(16, 56, 158);
-  --button-bg: rgb(245, 245, 245);
+  --button-bg: rgb(252, 252, 252);
   --button-bg-hover: rgb(226, 226, 226);
   --submit: rgb(26, 128, 0);
   --warn: rgb(255, 102, 0);
@@ -43,7 +43,6 @@ body {
   --font-l: 1.8rem;
   --font-reg: 1.6rem;
   --card-border-radius: 6px;
-  background-color: rgb(233, 252, 232);
 }
 
 header {
@@ -260,15 +259,7 @@ nav li {
     margin-left: auto;
   }
 
-  /* .header-logo-container {
-    width: 256px;
-    height: 35px;
-  }
 
-  .header-logo-container img {
-    margin: 0;
-  } 
-*/
   nav li {
     border-radius: 18px;
     margin: 0 10px;

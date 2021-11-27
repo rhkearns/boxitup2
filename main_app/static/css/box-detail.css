@@ -34,10 +34,6 @@ img {
   margin-top: 20px;
 }
 
-.items {
-  border: 1px solid rgba(17, 20, 17, .2);
-}
-
 .items-container {
   display: flex;
   flex-direction: column;
@@ -96,7 +92,7 @@ img {
 .items-container > section {
   width: 80%;
   min-width: 360px;
-  border: var(--borders);
+  border: 1px solid rgba(76, 218, 140, .5);
   border-radius: var(--card-border-radius);
   padding: 10px;
   box-shadow: var(--card-box-shadow);
@@ -147,16 +143,18 @@ img {
 .items td {
   padding: 8px 5px;
   font-size: var(--font-reg);
+  text-align: center;
 }
 
 .items th {
   font-size: var(--font-l);
   padding: 5px 5px 0;
   border-bottom: rgb(36, 116, 248) solid 2px;
+  text-align: center;
 }
 
 .items tr:nth-child(even) {
-  background-color: #f3f3fd;
+  background-color:rgba(59, 175, 111, 0.3);
 }
 
 #file-input {
