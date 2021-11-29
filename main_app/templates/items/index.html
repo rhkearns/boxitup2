@@ -6,7 +6,11 @@
 {% endblock  %}
 
 {% block content %}
-
+<form action="{% url 'items_search' %}" method="POST" class="item-search">
+  {% csrf_token %}
+  <input type="search" placeholder="Search Items" class="search-box" name="search-field">
+  <button class="btn search" type="submit">Search</button>
+</form>
 <div class="items-list">
   <table>
     <tr><th>Item</th><th>Quantity</th><th>Box #</th></tr>

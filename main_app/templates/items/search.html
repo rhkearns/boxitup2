@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/items-index.css' %}">
+{% endblock  %}
+
+{% block content %}
+<form action="{% url 'items_search' %}" method="POST" class="item-search">
+  {% csrf_token %}
+  <input type="search" placeholder="Search" class="search-box">
+  <button class="btn search" type="submit">Search</button>
+</form>
+<div class="items-list">
+  <table>
+    <tr><th>Item</th><th>Quantity</th><th>Box #</th></tr>
+    {% if searched %}
+      {% for find in finds %}
+      <tr>
+        <td>{{find.name}}</td>
+        <td>{{find.quantity}}</td>
+        <td>{{find.box}}</td>
+      </tr>
+      {% endfor %}
+    {% else %}
+      {% for item in items %}
+      <tr>
+        <td>{{item.name}}</td>
+        <td>{{item.quantity}}</td>
+        <td>{{item.box}}</td>
+      </tr>
+      {% endfor %}
+    {% endif %}
+  </table>
+</div>
+{% endblock  %}
