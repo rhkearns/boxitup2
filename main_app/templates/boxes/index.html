@@ -18,9 +18,9 @@
       <div class="card-content">
         <div class="card-img-container">
           {% if box.isClosed %}
-            <img src="{% static 'images/closed_box.png' %}" alt="A Closed Box">
+            <img src="{% static 'images/closed_box.png' %}" alt="A Closed Box" class="box-img">
           {% else %}
-            <img src="{% static 'images/open_box.png' %}" alt="An Open Box">
+            <img src="{% static 'images/open_box.png' %}" alt="An Open Box" class="box-img">
           {% endif %}
         </div>
         <h2 class="card-title">Box #{{box.number}}</h2>
