@@ -64,21 +64,12 @@ def close_box(request, box_id):
 @login_required
 def items_index(request):
   items = Item.objects.filter(user=request.user)
-  return render(request, 'items/index.html', {'items': items })
-
-
-
-@login_required
-def items_search(request):
-  items = Item.objects.filter(user=request.user)
   if request.method == "POST":
     searched = request.POST['search-field']
     finds = Item.objects.filter(name__icontains=searched)
-    return render(request, 'items/search.html', {'searched': searched, 'items': items, 'finds': finds})
+    return render(request, 'items/index.html', {'searched': searched, 'items': items, 'finds': finds})
   else:
-    return render(request, 'items_search', {})
-
-
+    return render(request, 'items/index.html', {'items': items })
 
 
 def signup(request):
