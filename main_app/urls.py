@@ -11,5 +11,6 @@ urlpatterns = [
   path('boxes/<int:box_id>/add_item', views.add_item, name='add_item'),
   path('boxes/<int:box_id>/delete_item/<int:item_id>/', views.delete_item, name='delete_item'),
   path('boxes/<int:box_id>/close', views.close_box, name="close_box"),
+  path('items/index/', views.items_index, name="items_index"),
   path('accounts/signup/', views.signup, name='signup'),
 ]

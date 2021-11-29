@@ -61,6 +61,15 @@ def close_box(request, box_id):
   box.save()
   return redirect('boxes_detail', box_id=box_id)
 
+@login_required
+def items_index(request):
+  items = Item.objects.filter(user=request.user)
+  return render(request, 'items/index.html', {'items': items })
+
+def search_items(request):
+  items = Item.objects.filter(user=request.user)
+  return render(request, 'items_search', {'items': items})
+
 def signup(request):
   error_message = ''
   if request.method == 'POST':
