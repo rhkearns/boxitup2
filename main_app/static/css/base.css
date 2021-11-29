@@ -156,6 +156,11 @@ nav li {
   border-color: var(--close);
 }
 
+.search {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
 .page-header h1 {
   font-size: var(--font-xxl);
   margin: 0;

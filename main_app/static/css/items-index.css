@@ -33,3 +33,20 @@ th {
 tr:nth-child(even) {
   background-color:rgba(59, 175, 111, 0.3);
 }
+
+.item-search {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search-box {
+  font-family: inherit;
+  font-weight: 600;
+  border-radius: 6px;
+  border-width: 2px;
+  border-style: solid;
+  height: calc(2 * var(--font-l) + 12px);
+  font-size: var(--font-l);
+}
