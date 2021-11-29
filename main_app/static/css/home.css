@@ -20,12 +20,13 @@ main > section {
 }
 
 .logo-container {
-  max-width: 375px;
+  max-width: 345px;
 }
 
-.cat-container {
-  width: 80%;
+img {
+  width: 345px;
 }
+
 
 .login {
   display: flex;
@@ -82,5 +83,9 @@ main > section {
 
   .logo-container {
     max-width: 520px;
+  }
+
+  img {
+    width: 520px;
   }
 }
