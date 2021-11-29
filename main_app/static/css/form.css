@@ -4,6 +4,10 @@
   width: 100%;
 }
 
+img {
+  width: 200px;
+}
+
 table {
   padding: 0 40px;
   width: 100%;
