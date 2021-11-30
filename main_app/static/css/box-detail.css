@@ -100,6 +100,7 @@
 
 .items tr:nth-child(even) {
   background-color:rgba(59, 175, 111, 0.726);
+  color: var(--accent-text-color)
 }
 
 @media only screen and (min-width: 768px) {
