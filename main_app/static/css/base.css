@@ -44,10 +44,11 @@ body {
 
 header {
   width: 100%;
+  background-color: var(--accent-bg);
 }
 
 nav {
-  margin: 10px 0;
+  /* margin: 10px 0; */
   background-color: var(--accent-bg);
 }
 
@@ -93,6 +94,7 @@ nav li {
   padding: 10px 20px 0;
   max-width: 500px;
   text-align: center;
+  background-color: var(--accent-bg);
 }
 
 .header-logo {
@@ -151,6 +153,7 @@ nav li {
     flex-direction: row;
     top: 0;
     align-items: center;
+    background-color: inherit;
   }
 
   main {
