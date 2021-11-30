@@ -14,7 +14,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items:;
 }
 
 table {
@@ -39,7 +38,7 @@ th {
 
 tr:nth-child(even) {
   background-color:rgba(59, 175, 111, 0.726);
-  color: var(--accent-text-color)
+  color: var(--accent-text-color);
 }
 
 .item-search {
