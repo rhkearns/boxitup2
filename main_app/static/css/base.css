@@ -26,10 +26,15 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   min-height: 100vh;
-  --nav-bg: rgb(76, 218, 140);
-  --text-color: rgb(17, 20, 17);
+  background-color: #5C0000;
+  color: #BABABA;
+  --nav-bg: #4cda8c;
+  --text-color: #BABABA;
+  --nav-text-color: rgb(20, 17, 20);
   --link-hover-color: rgb(16, 56, 158);
-  --button-bg: rgb(252, 252, 252);
+  /* --button-bg: rgb(252, 252, 252); */
+  --button-bg: rgba(112, 252, 175, 0.856);
+  --button-border: #4bd68ae1;
   --button-bg-hover: rgb(226, 226, 226);
   --submit: rgb(26, 128, 0);
   --warn: rgb(255, 102, 0);
@@ -73,11 +78,11 @@ nav a {
   font-weight: 600;
   font-size: 16px;
   margin: 5px;
-  color: var(--text-color)
+  color: var(--nav-text-color)
 }
 
 nav a:hover {
-  color: green;
+  color: darkgreen;
 }
 
 nav ul {
@@ -114,9 +119,9 @@ nav li {
 
 .btn {
   font-size: var(--font-l);
-  padding: 8px 16px;
-  border-radius: 6px;
-  border-width: 2px;
+  padding: 5px 8px;
+  border-radius: 20px;
+  border-width: 5px;
   border-style: solid;
   text-decoration: none;
   background-color: var(--button-bg);
@@ -132,28 +137,28 @@ nav li {
 }
 
 .submit {
-  color: var(--submit);
-  border-color: var(--submit);
+  color: var(--nav-text-color);
+  border-color: var(--button-border);
 }
 
 .secondary {
-  color: var(--secondary);
-  border-color: var(--secondary);
+  color: var(--nav-text-color);
+  border-color: var(--nav-bg);
 }
 
 .warn {
-  color: var(--warn);
-  border-color: var(--warn);
+  color: var(--nav-text-color);
+  border-color: var(--nav-bg);
 }
 
 .danger {
-  color: var(--danger);
-  border-color: var(--danger);
+  color: var(--nav-text-color);
+  border-color: var(--nav-bg);
 }
 
 .close {
-  color: var(--close);
-  border-color: var(--close);
+  color: var(--nav-text-color);
+  border-color: var(--nav-bg);
 }
 
 .search {
