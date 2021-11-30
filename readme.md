@@ -10,7 +10,7 @@ Have you ever packed your stuff up in boxes, but then you can't remeber what you
 ## Screenshots
 ![Home/Login page](main_app/static/images/Home_login.png)<br>
 ![Signup Screen](main_app/static/images/signup.png)<br>
-![Box Create](main_app/static/images/box_create.png)
+![Box Create](main_app/static/images/box_create.png)<br>
 ![Box List](main_app/static/images/box_list.png)<br>
 ![Box Details - Open](main_app/static/images/box_detail_open.png)<br>
 ![Box Details - Closed](main_app/static/images/box_detail_closed.png)<br>
@@ -21,7 +21,7 @@ Have you ever packed your stuff up in boxes, but then you can't remeber what you
 ## Technologies Used
   - Python
   - Django
-  - Django HTML
+  - HTML
   - CSS
   - JavaScript
   - Google Fonts
