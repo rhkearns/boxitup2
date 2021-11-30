@@ -35,7 +35,6 @@
         <li><a href="{% url 'items_index' %}">Search for an Item</a></li>
         <li><a href="{% url 'logout' %}">Log Out</a></li>
         {% else %}
-        <li><a href="{% url 'login' %}">Login</a></li>
         <li><a href="{% url 'signup' %}">Sign Up</a></li>
         {% endif %}
       </ul>
