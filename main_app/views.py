@@ -45,6 +45,7 @@ def add_item(request, box_id):
   if form.is_valid():
     new_item = form.save(commit=False)
     new_item.box_id = box_id
+    new_item.user = request.user
     new_item.save()
   return redirect('boxes_detail', box_id=box_id)
 
