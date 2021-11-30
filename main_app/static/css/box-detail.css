@@ -94,7 +94,7 @@
 .items th {
   font-size: var(--font-l);
   padding: 5px 5px 0;
-  border-bottom: rgb(36, 116, 248) solid 2px;
+  border-bottom: var(--accent-text-color) solid 2px;
   text-align: center;
 }
 
