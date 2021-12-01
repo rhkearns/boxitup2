@@ -28,4 +28,3 @@ Have you ever packed your stuff up in boxes, but then you can't remeber what you
 ***
 # Next Steps - Icebox
   - Bins to group boxes
-  - Dark Mode
